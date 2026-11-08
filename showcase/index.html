@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>SH Design System · Vitrine de Componentes</title>
+  <link rel="stylesheet" href="../packages/tokens/sh.css">
+  <link rel="stylesheet" href="../packages/ui/sh-components.css">
+  <style>
+    body { margin:0; }
+    .brand { color:var(--sh-color-brand-green);font-weight:850;letter-spacing:-.04em;font-size:1.35rem; }
+    .brand small { display:block;letter-spacing:.02em;color:#586774;font-weight:500;font-size:.68rem; }
+    .eyebrow { color:var(--sh-color-brand-green);font-weight:800;letter-spacing:.11em;text-transform:uppercase;font-size:.69rem; }
+    h1 { font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.04em;margin:5px 0; }
+    h2 { font-size:1.1rem;letter-spacing:-.02em;margin:0 0 12px; }
+    p { margin:0;color:#586774; }
+    .topline { display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;margin-bottom:24px; }
+    .notice { padding:11px 14px;background:#FFF4E4;color:#6A4300;border-radius:9px;font-size:.8rem;margin-bottom:22px; }
+    .hero {background:linear-gradient(120deg,var(--sh-color-brand-green-dark),var(--sh-color-brand-green));color:white;padding:28px 30px;border-radius:16px;display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:24px; }
+    .hero p { color:#E1F3E9;max-width:550px;font-size:.9rem; }
+    .hero .eyebrow { color:#FFA347; }
+    .hero h2 { font-size:1.65rem;margin:9px 0; }
+    .grid { display:grid;gap:14px;grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:24px; }
+    .two { display:grid;grid-template-columns:minmax(0,1.6fr) minmax(270px,1fr);gap:16px;margin-top:22px; }
+    .section-header {display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
+    .color-dot {display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--sh-color-brand-orange);margin-right:7px;}
+    .stack {display:grid;gap:13px;}
+    .note {font-size:.78rem;line-height:1.5;color:#687384}
+    .swatches {display:flex;gap:7px;margin-top:14px}
+    .swatches span {height:26px;flex:1;border:1px solid #DCE1E5;border-radius:5px}
+    @media(max-width:1100px){.grid {grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}.hero{padding:22px}.hero .sh-button{display:none}.topline{align-items:flex-start}}
+  </style>
+</head>
+<body class="sh-root">
+  <div class="sh-shell">
+    <aside class="sh-sidebar" aria-label="Navegação do exemplo">
+      <div class="brand" style="margin:0 8px 26px">SH <span style="color:var(--sh-color-brand-orange)">·</span> Design System
+        <small>Energética Santa Helena · proposta v0.1</small>
+      </div>
+      <nav class="sh-nav" aria-label="Seções da vitrine">
+        <a class="sh-nav__link" href="#visao" aria-current="page">▦ &nbsp; Visão geral</a>
+        <a class="sh-nav__link" href="#componentes">▤ &nbsp; Componentes</a>
+        <a class="sh-nav__link" href="#formulario">▣ &nbsp; Formulário</a>
+      </nav>
+      <p class="note" style="margin:24px 10px">Exemplo estático, sem acesso a informações corporativas. Esta não é uma aplicação real.</p>
+    </aside>
+    <main class="sh-main" id="visao">
+      <div class="topline">
+        <div>
+          <div class="eyebrow">Padrão visual · SH Workspace</div>
+          <h1>Visão geral</h1>
+          <p>Hierarquia, componentes e densidade para sistemas internos.</p>
+        </div>
+        <button class="sh-button" type="button" disabled aria-label="Ação de exemplo indisponível">Nova solicitação · exemplo</button>
+      </div>
+      <div class="notice"><span class="color-dot"></span>Vitrine com conteúdo sintético. Cores de UI ainda sujeitas à homologação institucional.</div>
+      <section class="hero" aria-label="Diretriz institucional">
+        <div><div class="eyebrow">Fundação visual</div><h2>Informação clara. Decisões consistentes.</h2>
+          <p>Identidade Santa Helena aplicada a aplicações corporativas, preservando legibilidade e sem excesso de elementos decorativos.</p>
+        </div>
+        <span aria-hidden="true" style="font-size:3rem;opacity:.55">◇</span>
+      </section>
+      <section aria-labelledby="kpis">
+        <div class="section-header"><h2 id="kpis">Indicadores demonstrativos</h2><span class="sh-badge sh-badge--neutral">Dados fictícios</span></div>
+        <div class="grid">
+          <div class="sh-card sh-kpi"><span class="sh-kpi__label">Itens acompanhados</span><strong class="sh-kpi__value">24</strong><span class="sh-kpi__hint">Amostra para avaliação visual</span></div>
+          <div class="sh-card sh-kpi"><span class="sh-kpi__label">Em andamento</span><strong class="sh-kpi__value">11</strong><span class="sh-kpi__hint">Distribuição de exemplo</span></div>
+          <div class="sh-card sh-kpi"><span class="sh-kpi__label">Concluídos</span><strong class="sh-kpi__value">9</strong><span class="sh-kpi__hint">Sem integração de dados</span></div>
+          <div class="sh-card sh-kpi"><span class="sh-kpi__label">Pontos de atenção</span><strong class="sh-kpi__value">4</strong><span class="sh-badge sh-badge--warning" style="width:max-content">Em revisão</span></div>
+        </div>
+      </section>
+      <section id="componentes">
+        <nav class="sh-tabs" aria-label="Abas de exemplo">
+          <a href="#componentes" aria-current="page">Visão geral</a>
+          <a href="#formulario">Formulários</a>
+        </nav>
+        <div class="two">
+          <div class="sh-card">
+            <div class="section-header"><h2>Itens demonstrativos</h2><span class="note">Tabela adaptativa</span></div>
+            <div class="sh-table-wrap">
+              <table class="sh-table">
+                <thead><tr><th scope="col">Item</th><th scope="col">Responsável fictício</th><th scope="col">Situação</th><th scope="col">Progresso</th></tr></thead>
+                <tbody>
+                  <tr><td>Exemplo Alfa</td><td>Equipe A</td><td><span class="sh-badge">No prazo</span></td><td>75%</td></tr>
+                  <tr><td>Exemplo Beta</td><td>Equipe B</td><td><span class="sh-badge sh-badge--warning">Em revisão</span></td><td>45%</td></tr>
+                  <tr><td>Exemplo Gama</td><td>Equipe C</td><td><span class="sh-badge sh-badge--danger">Atenção</span></td><td>25%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="sh-card" id="formulario">
+            <h2>Formulário de exemplo</h2>
+            <form class="stack" onsubmit="event.preventDefault();document.getElementById('feedback').textContent='Demonstração local: nenhum dado foi enviado.'">
+              <label class="sh-field">Título <input class="sh-input" name="titulo" placeholder="Informe um título" required><span class="sh-hint">Campo obrigatório</span></label>
+              <label class="sh-field">Categoria
+                <select class="sh-select" name="categoria"><option>Selecione uma categoria</option><option>Operacional</option><option>Administrativo</option></select>
+              </label>
+              <button class="sh-button" type="submit">Validar exemplo</button>
+              <span id="feedback" role="status" class="sh-hint" aria-live="polite"></span>
+            </form>
+            <div class="swatches" aria-label="Cores oficiais da marca">
+              <span style="background:#00602D" title="Verde oficial"></span><span style="background:#032D10" title="Verde escuro oficial"></span><span style="background:#EF7D00" title="Laranja oficial"></span><span style="background:#FFFFFF" title="Branco oficial"></span>
+            </div>
+            <p class="note" style="margin-top:8px">A vitrine valida padrões preliminares, não uma identidade corporativa homologada.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

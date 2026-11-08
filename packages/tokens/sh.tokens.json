@@ -1,0 +1,132 @@
+{
+  "$description": "SH Design System. brand = Brandbook SH 2026 (oficial); ui/space/radius/typography = proposta de produto. v0.1.0 não homologada.",
+  "color": {
+    "brand": {
+      "green": {
+        "$type": "color",
+        "$value": "#00602D",
+        "$description": "Oficial: Brandbook SH 2026"
+      },
+      "green-dark": {
+        "$type": "color",
+        "$value": "#032D10",
+        "$description": "Oficial: Brandbook SH 2026"
+      },
+      "orange": {
+        "$type": "color",
+        "$value": "#EF7D00",
+        "$description": "Oficial: Brandbook SH 2026"
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Oficial: Brandbook SH 2026"
+      }
+    },
+    "ui": {
+      "background": {
+        "$type": "color",
+        "$value": "#F5F6F8",
+        "$description": "Proposta"
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Proposta"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#1D2025",
+        "$description": "Proposta"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "#64748B",
+        "$description": "Proposta"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#DCE1E5",
+        "$description": "Proposta"
+      },
+      "success": {
+        "$type": "color",
+        "$value": "#166534",
+        "$description": "Proposta"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#9A6700",
+        "$description": "Proposta"
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "#B42318",
+        "$description": "Proposta"
+      }
+    }
+  },
+  "space": {
+    "1": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "32px"
+    }
+  },
+  "radius": {
+    "sm": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "16px"
+    }
+  },
+  "typography": {
+    "ui": {
+      "$type": "fontFamily",
+      "$value": [
+        "Inter",
+        "Segoe UI",
+        "system-ui",
+        "sans-serif"
+      ],
+      "$description": "Proposta para UI: não implica incorporação de fontes"
+    },
+    "brand": {
+      "$type": "fontFamily",
+      "$value": [
+        "Dax",
+        "Inter",
+        "Segoe UI",
+        "system-ui",
+        "sans-serif"
+      ],
+      "$description": "Dax indicada no Brandbook; depende de licenciamento"
+    }
+  }
+}

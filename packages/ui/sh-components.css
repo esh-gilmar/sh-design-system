@@ -1,0 +1,71 @@
+/* SH UI CSS reference v0.1.0 — proposed, not a released React component library */
+:where(.sh-root) {
+  font-family: var(--sh-font-ui);
+  color: var(--sh-color-ui-text);
+  background: var(--sh-color-ui-background);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+:where(.sh-root *, .sh-root *::before, .sh-root *::after) { box-sizing: border-box; }
+.sh-root :focus-visible { outline: 3px solid var(--sh-color-brand-green); outline-offset: 3px; }
+.sh-button {
+  appearance: none; border: 1px solid transparent; border-radius: var(--sh-radius-sm);
+  min-height: 40px; padding: 9px 15px; display: inline-flex; align-items: center;
+  justify-content: center; gap: 8px; background: var(--sh-color-brand-green);
+  color: #fff; font: inherit; font-size: .875rem; font-weight: 650;
+  text-decoration: none; cursor: pointer; transition: background .15s ease,border-color .15s ease;
+}
+.sh-button:hover { background: var(--sh-color-brand-green-dark); }
+.sh-button--secondary { background: var(--sh-color-ui-surface); color: var(--sh-color-ui-text); border-color: var(--sh-color-ui-border); }
+.sh-button--secondary:hover { background: var(--sh-color-ui-background); }
+.sh-button--ghost { background: transparent; color: var(--sh-color-brand-green); }
+.sh-button--ghost:hover { background: #EAF5EE; }
+.sh-button:disabled, .sh-button[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+.sh-card {
+  background: var(--sh-color-ui-surface); border: 1px solid var(--sh-color-ui-border);
+  border-radius: var(--sh-radius-md); padding: var(--sh-space-4);
+}
+.sh-field { display: grid; gap: 6px; font-size: .875rem; font-weight: 600; }
+.sh-input, .sh-select {
+  width: 100%; min-height: 40px; border: 1px solid #B6C0CA; border-radius: var(--sh-radius-sm);
+  padding: 9px 12px; background: #fff; color: var(--sh-color-ui-text);
+  font: inherit; font-weight: 400;
+}
+.sh-input:focus, .sh-select:focus { border-color: var(--sh-color-brand-green); }
+.sh-input[aria-invalid="true"] { border-color: var(--sh-color-ui-danger); }
+.sh-hint { color: var(--sh-color-ui-muted); font-size: .75rem; font-weight: 400; }
+.sh-error { color: var(--sh-color-ui-danger); font-size: .75rem; font-weight: 550; }
+.sh-badge { font-size: .75rem; font-weight: 650; display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; padding: 4px 9px; background: #EAF5EE; color: var(--sh-color-ui-success); }
+.sh-badge--warning { background: #FFF4E4; color: #855600; }
+.sh-badge--danger { background: #FFF0EE; color: #A32218; }
+.sh-badge--neutral { background: #EEF1F4; color: #425466; }
+.sh-shell { display: grid; min-height: 100vh; grid-template-columns: 230px minmax(0, 1fr); }
+.sh-sidebar { padding: 24px 14px; background: #fff; border-right: 1px solid var(--sh-color-ui-border); }
+.sh-main { min-width: 0; padding: 26px clamp(16px, 3vw, 44px); }
+.sh-nav { display: grid; gap: 3px; }
+.sh-nav__link { text-decoration: none; border-radius: 8px; padding: 10px 12px; display: flex; gap: 10px; align-items: center; color: #425466; font-size: .875rem; }
+.sh-nav__link:hover { background: #F4F6F7; }
+.sh-nav__link[aria-current="page"] { color: var(--sh-color-brand-green); background: #EAF5EE; font-weight: 700; border-left: 3px solid var(--sh-color-brand-green); padding-left: 9px; }
+.sh-kpi { display: grid; gap: 5px; }
+.sh-kpi__label { font-size: .85rem; color: #526174; }
+.sh-kpi__value { font-size: clamp(1.65rem, 2vw, 2rem); line-height: 1.1; font-weight: 750; letter-spacing: -.04em; }
+.sh-kpi__hint { font-size: .75rem; color: var(--sh-color-ui-muted); }
+.sh-table-wrap { overflow-x: auto; border: 1px solid var(--sh-color-ui-border); border-radius: var(--sh-radius-md); background: #fff; }
+.sh-table { width: 100%; border-collapse: collapse; text-align: left; font-size: .875rem; }
+.sh-table th, .sh-table td { padding: 13px 15px; border-bottom: 1px solid #E7EAED; }
+.sh-table th { color: #536174; font-size: .75rem; letter-spacing: .01em; font-weight: 700; background: #FAFBFC; }
+.sh-table tbody tr:last-child td { border-bottom: 0; }
+.sh-table tbody tr:hover { background: #FAFCFB; }
+.sh-tabs { display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid var(--sh-color-ui-border); }
+.sh-tabs a { display: inline-block; text-decoration: none; padding: 11px 8px; font-size: .875rem; color: #526174; border-bottom: 2px solid transparent; }
+.sh-tabs a[aria-current="page"] { color: var(--sh-color-brand-green); border-color: var(--sh-color-brand-green); font-weight: 700; }
+@media (max-width: 860px) {
+  .sh-shell { grid-template-columns: 1fr; }
+  .sh-sidebar { border-right: 0; border-bottom: 1px solid var(--sh-color-ui-border); padding: 12px 16px; }
+  .sh-nav { display: flex; overflow-x: auto; }
+  .sh-nav__link { white-space: nowrap; }
+  .sh-main { padding: 22px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sh-button { transition: none; }
+}

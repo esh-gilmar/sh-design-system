@@ -1,23 +1,47 @@
 # SH Design System
 
-Fundação do design system de aplicações da Energética Santa Helena.
+**Design System de aplicações da Energética Santa Helena · Fundação v0.1.0 (proposta)**
 
-> **Status:** inicialização. A especificação completa está sendo desenvolvida via Pull Requests. Não confundir com um padrão institucional aprovado.
+> **Status:** proposta técnica em validação, ainda não homologada como padrão corporativo. Este repositório está **público** no momento; não publicar prints internos, materiais restritos, dados pessoais, credenciais ou fontes licenciadas.
 
-## Objetivo
+## O que contém
 
-Consolidar tokens, regras de interface, componentes reutilizáveis e instruções para agentes (Codex, Claude Code e Gemini), distinguindo identidade oficial da marca de decisões propostas para produtos digitais.
+| Camada | Caminho | Responsabilidade |
+| --- | --- | --- |
+| Identidade | docs/foundations.md | Padrões oficiais versus decisões digitais propostas |
+| Tokens | packages/tokens/ | Valores semânticos em JSON e CSS, independentes do framework |
+| UI de referência | packages/ui/sh-components.css | Componentes CSS para prototipação e aplicações sem React |
+| Vitrine | showcase/index.html | Dashboard e formulário sem dados internos |
+| Agentes | .agents/skills/sh-web-ui/SKILL.md | Skill principal para Codex / Gemini |
+| Claude Code | .claude/skills/sh-web-ui/SKILL.md | Adaptador para a Skill principal |
+| Qualidade | tests/ e .github/workflows/ | Testes para tokens, contraste e arquivos obrigatórios |
+| Origem visual | docs/references.md | Inventário de screenshots sem incluir capturas confidenciais |
 
-## Referências
+## Começar
 
-- Brandbook SH 2026 (material institucional; **não publicado** neste repositório).
-- Aplicações SH analisadas: Helena Projetos, Portal PCP Agrícola e Registro de Viagem.
-- Capturas de tela reais: inventariadas sem publicar dados corporativos.
+~~~bash
+git clone https://github.com/esh-gilmar/sh-design-system.git
+cd sh-design-system
+npm test
+npm run tokens:check
+~~~
 
-## Segurança
+Para inspecionar a vitrine, abra showcase/index.html em um navegador (os estilos são relativos e não dependem de CDN). Os exemplos não implementam autenticação e não expõem dados da operação.
 
-**Este repositório está público.** Não fazer commit de prints internos com informações pessoais, chaves, arquivos corporativos restritos, logomarcas sem autorização nem fontes licenciadas. Para materiais restritos, utilizar repositório privado e política de acesso corporativa.
+## Uso em projetos novos
 
-## Como contribuir
+1. Consulte AGENTS.md e a Skill sh-web-ui.
+2. Consuma os tokens de packages/tokens/sh.css, fixando uma versão/tag.
+3. Reutilize estilos/componentes existentes ou proponha novos componentes com evidências.
+4. Execute npm test e verificação visual nas telas afetadas.
+5. Não adote referências legadas que contrariem o Brandbook.
 
-A fundação será proposta em uma branch dedicada, revisada por Pull Request antes da adoção na `main`.
+Para aplicações React, a futura biblioteca @sh/ui terá wrappers sobre primitives acessíveis; **não está publicada** e não deve ser declarada como dependência existente.
+
+## Regras de precedência
+
+**Marca oficial (Brandbook SH 2026)** > **decisões aprovadas do Design System** > **padrões propostos** > **legado de aplicações**.
+
+## Próximos passos
+
+Ver docs/roadmap.md. Para contribuir, siga docs/contributing.md.
