@@ -66,3 +66,7 @@ Exemplos de cores identificadas em aplicações SH:
 - PCP Agrícola e Registro de Viagem Admin: #00D17A / #F28C07.
 
 São evidências do legado, **não autorização** para substituir #00602D / #EF7D00 como fonte institucional.
+
+## Legibilidade mínima e apresentação
+
+A escala de 12 px encontrada em algumas telas legadas **não é padrão recomendado** para relatórios e painéis de análise. Para uso operacional, adotar fonte base de 16 px, e evitar suporte, tabelas e legendas sistematicamente abaixo de 14 px. Para projeção em data show, aplicar o perfil **SH Presentation** definido em [docs/presentation.md](presentation.md): títulos grandes, rótulos de gráficos e metodologia legíveis à distância, evitando mera ampliação do dashboard.
