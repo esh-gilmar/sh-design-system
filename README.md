@@ -45,3 +45,7 @@ Para aplicações React, a futura biblioteca @sh/ui terá wrappers sobre primiti
 ## Próximos passos
 
 Ver docs/roadmap.md. Para contribuir, siga docs/contributing.md.
+
+## Modo apresentação
+
+Para relatórios executivos projetados em sala, siga [SH Presentation](docs/presentation.md). A escala do SH Workspace não é suficiente para data show: requer tipografia, legendas e gráficos maiores e composição por slides sem rolagem horizontal.
