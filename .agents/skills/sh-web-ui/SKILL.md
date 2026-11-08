@@ -41,3 +41,7 @@ Leia, nesta ordem:
 ## Critério de entrega
 
 Resultado funcional + evidência de testes + documentação das exceções visuais + nenhuma regressão de acessibilidade conhecida.
+
+## Quando a solicitação envolver apresentação, telão ou data show
+
+Leia **docs/presentation.md** obrigatoriamente. Não transporte duas visualizações densas lado a lado para slides. Confirme a fonte legível após escalar o gráfico/SVG; use um assunto por slide, navegação por teclado, tela cheia opcional, logo autorizada, período, metodologia e fontes. Preferir ampliar a escala e reduzir a quantidade de dados por tela, preservando a visualização detalhada no dashboard. Valide em 1366×768 e 1920×1080, além de garantir ausência de overflow horizontal.
