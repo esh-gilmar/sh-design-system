@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+# Referências com dados reais e materiais corporativos restritos NÃO devem entrar no repositório público.
+references/private/
+brand/private/
+screenshots/private/
+# Fontes licenciadas: não publicar arquivos de fonte sem permissão.
+*.woff
+*.woff2
+*.ttf
+*.otf
